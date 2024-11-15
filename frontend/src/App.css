@@ -1,0 +1,191 @@
+.hero-section {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.1;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  background: linear-gradient(120deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.controls-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Controls Section */
+.controls-section {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+}
+
+button.active {
+  background: #4a90e2;
+  color: white;
+}
+
+/* Ragas Section */
+.ragas-section {
+  margin: 30px 0;
+}
+
+.ragas-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.raga-item {
+  width: 200px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.raga-item:hover {
+  transform: translateY(-2px);
+}
+
+.raga-item.selected {
+  background: #4a90e2;
+  color: white;
+}
+
+.raga-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+}
+
+/* Tracks Section */
+.tracks-section {
+  margin-top: 30px;
+}
+
+.tracks-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.track-item {
+  width: 250px;
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.track-image {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.track-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.play-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: white;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border: none;
+}
+
+.track-info h4 {
+  margin: 5px 0;
+}
+
+.track-info p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* States */
+.loading, .error {
+  padding: 20px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .controls-section {
+    flex-direction: column;
+  }
+  
+  .raga-item, .track-item {
+    width: 100%;
+    max-width: 300px;
+  }
+}
